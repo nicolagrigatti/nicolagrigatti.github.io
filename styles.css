@@ -325,16 +325,14 @@ h2 {
 
 .combined-layout {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
     .combined-layout {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
         gap: 4rem;
     }
 }
@@ -342,7 +340,7 @@ h2 {
 .release-side {
     text-align: center;
     flex: 1;
-    max-width: 300px;
+    max-width: 160px;
     display: flex;
     flex-direction: column;
 }
@@ -350,18 +348,34 @@ h2 {
 .links-side {
     text-align: center;
     flex: 1;
-    max-width: 300px;
+    max-width: 160px;
     display: flex;
     flex-direction: column;
 }
 
 .release-side h2,
 .links-side h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.6rem;
 }
 
 .links-side h2:not(:first-child) {
-    margin-top: 0.75rem;
+    margin-top: 0.4rem;
+}
+
+@media (min-width: 768px) {
+    .release-side,
+    .links-side {
+        max-width: 300px;
+    }
+    .release-side h2,
+    .links-side h2 {
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+    }
+    .links-side h2:not(:first-child) {
+        margin-top: 0.75rem;
+    }
 }
 
 .release-content {
@@ -374,19 +388,20 @@ h2 {
 .link-grid-compact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.35rem;
+    gap: 0.25rem;
     flex: 1;
     align-content: center;
 }
 
 .link-grid-compact .link-button {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.5rem;
-    min-height: 32px;
+    padding: 0.25rem 0.3rem;
+    font-size: 0.4rem;
+    min-height: 24px;
+    gap: 0.2rem;
 }
 
 .link-grid-compact .link-button i {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
 }
 
 @media (min-width: 768px) {
@@ -425,13 +440,21 @@ h2 {
 }
 
 .release-artwork {
-    width: 216px;
-    height: 216px;
+    width: 130px;
+    height: 130px;
     flex-shrink: 0;
-    margin: 0 auto 0.75rem;
+    margin: 0 auto 0.5rem;
     border: 1px solid #000;
     border-radius: 4px;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .release-artwork {
+        width: 216px;
+        height: 216px;
+        margin: 0 auto 0.75rem;
+    }
 }
 
 .artwork-placeholder {
@@ -456,6 +479,32 @@ h2 {
 
 .release-info {
     text-align: center;
+}
+
+.release-info .release-title {
+    font-size: 0.75rem;
+}
+
+.release-info .release-artist {
+    font-size: 0.65rem;
+}
+
+.release-info .release-cat {
+    font-size: 0.55rem;
+    margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .release-info .release-title {
+        font-size: 1rem;
+    }
+    .release-info .release-artist {
+        font-size: 0.875rem;
+    }
+    .release-info .release-cat {
+        font-size: 0.7rem;
+        margin-bottom: 0.75rem;
+    }
 }
 
 .release-title {
