@@ -364,6 +364,29 @@ h2 {
     flex-shrink: 0;
 }
 
+/* Label overlaid on artwork */
+.artwork-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.45rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.15rem 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .artwork-label {
+        font-size: 0.55rem;
+        padding: 0.2rem 0;
+    }
+}
+
 .links-side h2 {
     margin-bottom: 0.1rem;
     font-size: 0.45rem;
@@ -405,11 +428,19 @@ h2 {
 .release-content {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     width: 100%;
     min-height: 0;
+}
+
+@media (min-width: 768px) {
+    .release-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
 
 .link-grid-compact {
@@ -471,10 +502,11 @@ h2 {
     max-width: 250px;
     aspect-ratio: 1;
     flex-shrink: 1;
-    margin: 0 auto 0.15rem;
+    margin: 0;
     border: 1px solid #000;
     border-radius: 4px;
     overflow: hidden;
+    position: relative;
 }
 
 @media (min-width: 768px) {
@@ -506,8 +538,14 @@ h2 {
 }
 
 .release-info {
-    text-align: center;
+    text-align: left;
     flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .release-info {
+        text-align: center;
+    }
 }
 
 .release-info .release-title {
