@@ -166,9 +166,10 @@ html, body.snap-scroll {
     text-align: center;
     width: 100%;
     max-width: 900px;
-    height: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
+    min-height: 0;
 }
 
 .hero-top {
@@ -210,7 +211,7 @@ html, body.snap-scroll {
 
 @media (min-width: 768px) {
     .hero-release {
-        justify-content: center;
+        justify-content: flex-start;
         padding: 1rem 1.5rem;
     }
     .logo-small-hero {
@@ -228,7 +229,7 @@ html, body.snap-scroll {
         font-size: 0.75rem;
     }
     .hero-top {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -327,20 +328,14 @@ h2 {
     max-width: 900px;
 }
 
+/* Mobile: vertical stack, artwork fills middle, buttons at bottom */
 .combined-layout {
     display: flex;
     flex-direction: column;
-    gap: 0;
     align-items: center;
     width: 100%;
     flex: 1;
-}
-
-@media (min-width: 768px) {
-    .combined-layout {
-        flex-direction: column;
-        gap: 0;
-    }
+    min-height: 0;
 }
 
 .release-side {
@@ -348,9 +343,10 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     flex: 1;
-    justify-content: center;
+    min-height: 0;
 }
 
 .links-side {
@@ -359,37 +355,50 @@ h2 {
     flex-direction: column;
     width: 100%;
     flex-shrink: 0;
-    max-width: 500px;
+    padding-top: 0.3rem;
 }
 
 .release-side h2 {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
     font-size: 0.6rem;
+    flex-shrink: 0;
 }
 
 .links-side h2 {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.15rem;
     font-size: 0.55rem;
 }
 
 .links-side h2:not(:first-child) {
-    margin-top: 0.2rem;
+    margin-top: 0.15rem;
 }
 
+/* Desktop: side by side */
 @media (min-width: 768px) {
+    .combined-layout {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+    .release-side {
+        flex: 1;
+        max-width: 350px;
+    }
     .release-side h2 {
         margin-bottom: 0.5rem;
         font-size: 0.75rem;
     }
     .links-side {
-        max-width: 600px;
+        flex: 1;
+        max-width: 350px;
+        padding-top: 0;
     }
     .links-side h2 {
         margin-bottom: 0.5rem;
         font-size: 0.75rem;
     }
     .links-side h2:not(:first-child) {
-        margin-top: 0.5rem;
+        margin-top: 0.75rem;
     }
 }
 
@@ -400,6 +409,7 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 0;
 }
 
 .link-grid-compact {
@@ -411,19 +421,18 @@ h2 {
 }
 
 .link-grid-compact .link-button {
-    padding: 0.35rem 0.3rem;
-    font-size: 0.5rem;
-    min-height: 30px;
+    padding: 0.4rem 0.3rem;
+    font-size: 0.55rem;
+    min-height: 32px;
     gap: 0.25rem;
 }
 
 .link-grid-compact .link-button i {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
 }
 
 @media (min-width: 768px) {
     .link-grid-compact {
-        grid-template-columns: 1fr 1fr 1fr;
         gap: 0.5rem;
     }
 
@@ -458,7 +467,7 @@ h2 {
 }
 
 .release-artwork {
-    width: 100%;
+    width: 45vw;
     max-width: 250px;
     aspect-ratio: 1;
     flex-shrink: 1;
@@ -470,6 +479,7 @@ h2 {
 
 @media (min-width: 768px) {
     .release-artwork {
+        width: 100%;
         max-width: 280px;
         margin: 0 auto 0.5rem;
     }
@@ -497,20 +507,21 @@ h2 {
 
 .release-info {
     text-align: center;
+    flex-shrink: 0;
 }
 
 .release-info .release-title {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     margin-bottom: 0.1rem;
 }
 
 .release-info .release-artist {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     margin-bottom: 0.1rem;
 }
 
 .release-info .release-cat {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
     margin-bottom: 0;
 }
 
