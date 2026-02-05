@@ -424,22 +424,24 @@ h2 {
     flex: 1;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.5rem;
     width: 100%;
     min-height: 0;
 }
 
-.release-content .artwork-label {
-    width: 100%;
+.artwork-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 @media (min-width: 768px) {
     .release-content {
         flex-direction: column;
-        flex-wrap: nowrap;
         gap: 0.5rem;
     }
 }
