@@ -133,10 +133,13 @@ html, body.snap-scroll {
 /* Full Page Sections */
 .page {
     height: 100vh;
+    height: 100dvh;
     min-height: 100vh;
+    min-height: 100dvh;
     max-height: 100vh;
-    padding: 2rem 1.5rem;
-    padding-bottom: 2rem;
+    max-height: 100dvh;
+    padding: 0.5rem 1rem;
+    padding-bottom: 1.8rem;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     display: flex;
@@ -148,32 +151,53 @@ html, body.snap-scroll {
     transition: opacity 0.5s ease;
 }
 
+@media (min-width: 768px) {
+    .page {
+        padding: 1rem 1.5rem;
+        padding-bottom: 2rem;
+    }
+}
+
 .page-content {
     max-width: 800px;
     width: 100%;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+@media (min-width: 768px) {
+    .page-content {
+        padding: 1rem 0;
+    }
 }
 
 /* Hero + Release Combined Section */
 .hero-release {
     justify-content: flex-start;
-    padding: 0.5rem 1rem;
-    padding-top: 0.5rem;
+    padding: 0.3rem 1rem;
+    padding-bottom: 1.8rem;
+}
+
+@media (min-width: 768px) {
+    .hero-release {
+        padding: 0.5rem 1.5rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .hero-release-content {
     text-align: center;
     width: 100%;
     max-width: 900px;
-    flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    flex: 1;
     min-height: 0;
 }
 
 .hero-top {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,7 +206,7 @@ html, body.snap-scroll {
 
 .logo-small-hero {
     max-width: 80%;
-    width: 120px;
+    width: 90px;
     height: auto;
 }
 
@@ -195,41 +219,37 @@ html, body.snap-scroll {
 }
 
 .logo-text-hero {
-    width: 100px;
+    width: 80px;
     height: auto;
-    margin-top: 0.25rem;
+    margin-top: 0.15rem;
 }
 
 .tagline-small {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     font-weight: 300;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #666;
-    margin-top: 0.25rem;
+    margin-top: 0.15rem;
 }
 
 @media (min-width: 768px) {
-    .hero-release {
-        justify-content: flex-start;
-        padding: 1rem 1.5rem;
-    }
     .logo-small-hero {
-        width: 300px;
+        width: 200px;
     }
     .logo-text-hero {
-        width: 180px;
-        margin-top: 0.5rem;
+        width: 140px;
+        margin-top: 0.3rem;
     }
     .site-title-small {
-        font-size: 1.25rem;
-        margin-top: 0.5rem;
+        font-size: 1rem;
+        margin-top: 0.3rem;
     }
     .tagline-small {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
     }
     .hero-top {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -280,15 +300,22 @@ html, body.snap-scroll {
 /* Scroll Arrow */
 .scroll-arrow {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     animation: bounce 2s infinite;
     opacity: 0.4;
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .scroll-arrow {
+        bottom: 2rem;
+        font-size: 1.5rem;
+    }
 }
 
 .scroll-arrow:hover {
@@ -328,14 +355,22 @@ h2 {
     max-width: 900px;
 }
 
-/* Mobile: vertical stack, artwork fills middle, buttons at bottom */
+/* Combined layout - same on mobile and desktop */
 .combined-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 0.15rem;
     flex: 1;
     min-height: 0;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .combined-layout {
+        gap: 0.4rem;
+    }
 }
 
 .release-side {
@@ -343,9 +378,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    flex: 1;
+    flex-shrink: 1;
     min-height: 0;
 }
 
@@ -355,16 +389,11 @@ h2 {
     flex-direction: column;
     width: 100%;
     flex-shrink: 0;
-    padding-top: 0.15rem;
+    max-width: 500px;
+    align-items: center;
 }
 
-.release-side h2 {
-    margin-bottom: 0.1rem;
-    font-size: 0.5rem;
-    flex-shrink: 0;
-}
-
-/* Label above artwork */
+/* Label directly above artwork */
 .artwork-label {
     font-size: 0.45rem;
     font-weight: 500;
@@ -372,13 +401,13 @@ h2 {
     text-transform: uppercase;
     color: #666;
     text-align: center;
-    flex-shrink: 0;
+    margin-bottom: 0.05rem;
 }
 
 @media (min-width: 768px) {
     .artwork-label {
         font-size: 0.65rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.15rem;
     }
 }
 
@@ -391,43 +420,25 @@ h2 {
     margin-top: 0.1rem;
 }
 
-/* Desktop: side by side */
 @media (min-width: 768px) {
-    .combined-layout {
-        flex-direction: row;
-        align-items: center;
-        gap: 3rem;
-    }
-    .release-side {
-        flex: 1;
-        max-width: 350px;
-    }
-    .release-side h2 {
-        margin-bottom: 0.5rem;
-        font-size: 0.75rem;
-    }
     .links-side {
-        flex: 1;
-        max-width: 350px;
-        padding-top: 0;
+        max-width: 600px;
     }
     .links-side h2 {
-        margin-bottom: 0.5rem;
-        font-size: 0.75rem;
+        margin-bottom: 0.3rem;
+        font-size: 0.65rem;
     }
     .links-side h2:not(:first-child) {
-        margin-top: 0.75rem;
+        margin-top: 0.3rem;
     }
 }
 
 .release-content {
-    flex: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
     width: 100%;
+    flex-shrink: 1;
     min-height: 0;
 }
 
@@ -436,14 +447,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     flex-shrink: 1;
-    min-width: 0;
+    min-height: 0;
 }
 
-@media (min-width: 768px) {
-    .release-content {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+.release-info {
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .link-grid-compact {
@@ -501,10 +510,11 @@ h2 {
 }
 
 .release-artwork {
-    width: 50vw;
-    max-width: 250px;
+    width: 35vw;
+    max-width: 220px;
     aspect-ratio: 1;
     flex-shrink: 1;
+    min-height: 0;
     margin: 0;
     border: 1px solid #000;
     border-radius: 4px;
@@ -515,7 +525,7 @@ h2 {
     .release-artwork {
         width: 100%;
         max-width: 280px;
-        margin: 0 auto 0.5rem;
+        margin: 0 auto 0.25rem;
     }
 }
 
@@ -537,32 +547,27 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.release-info {
-    text-align: left;
-    flex-shrink: 0;
-}
-
-@media (min-width: 768px) {
-    .release-info {
-        text-align: center;
-    }
-}
+/* release-info text-align handled in combined layout block above */
 
 .release-info .release-title {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
     margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .release-info .release-artist {
-    font-size: 0.6rem;
+    font-size: 0.45rem;
     margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .release-info .release-cat {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     margin-bottom: 0;
+    line-height: 1.2;
 }
 
 @media (min-width: 768px) {
