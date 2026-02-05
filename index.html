@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subritual Records</title>
+    <meta name="description" content="Subritual Records - Underground electronic music label">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="snap-scroll">
+    <!-- Hero + Latest Release Combined -->
+    <section id="section-1" class="page hero-release">
+        <div class="hero-release-content">
+            <!-- Top: Logo & Label Name -->
+            <div class="hero-top">
+                <img src="images/logo top.png" alt="Subritual Records" class="logo-small-hero">
+                <img src="images/logo foother.jpg" alt="Subritual Records" class="logo-text-hero">
+                <!-- Menu -->
+                <nav class="hamburger-menu">
+                    <input type="checkbox" id="menu-toggle-1" class="menu-toggle">
+                    <label for="menu-toggle-1" class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <ul class="menu-list">
+                        <li><a href="#section-1">Home</a></li>
+                        <li><a href="#section-2">Artists</a></li>
+                        <li><a href="#section-3">Listen</a></li>
+                                            </ul>
+                </nav>
+            </div>
+
+            <!-- Bottom: Release + Links -->
+            <div class="combined-layout">
+                <!-- Left: Release -->
+                <div class="release-side">
+                    <h2>Latest Release</h2>
+                    <div class="release-content">
+                        <div class="release-artwork">
+                            <img src="images/PROTOCOL ZERO ARTWORK 3000_ok2 .png" alt="Protocol Zero Artwork">
+                        </div>
+                        <div class="release-info">
+                            <h3 class="release-title">Protocol Zero</h3>
+                            <p class="release-artist">HypoGeo & Electrypnose</p>
+                            <p class="release-cat">SR001</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Links -->
+                <div class="links-side">
+                    <h2>Listen & Support</h2>
+                    <div class="link-grid-compact">
+                        <a href="https://subritualrecords.bandcamp.com/" class="link-button" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-bandcamp"></i> Bandcamp
+                        </a>
+                        <a href="#" class="link-button" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-bolt"></i> Beatport
+                        </a>
+                        <a href="https://soundcloud.com/subritualrecords" class="link-button" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-soundcloud"></i> SoundCloud
+                        </a>
+                        <a href="#" class="link-button" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-apple"></i> Apple Music
+                        </a>
+                    </div>
+
+                    <h2>Follow Us</h2>
+                    <div class="link-grid-compact">
+                        <a href="https://www.youtube.com/@subritualrecords" class="link-button" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-youtube"></i> YouTube
+                        </a>
+                        <a href="https://www.instagram.com/subritual.records" class="link-button" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                        <a href="#" class="link-button" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook"></i> Facebook
+                        </a>
+                        <a href="#" class="link-button" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-plus"></i> Coming Soon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Artists -->
+    <section id="section-2" class="page artists">
+        <div class="page-content">
+            <h2>Artists</h2>
+            <!-- Menu -->
+            <nav class="hamburger-menu">
+                <input type="checkbox" id="menu-toggle-2" class="menu-toggle">
+                <label for="menu-toggle-2" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="menu-list">
+                    <li><a href="#section-1">Home</a></li>
+                    <li><a href="#section-2">Artists</a></li>
+                    <li><a href="#section-3">Listen</a></li>
+                                    </ul>
+            </nav>
+            <div class="artist-grid">
+                <div class="artist-card" onclick="openModal('hypogeo-modal')">
+                    <div class="artist-image">
+                        <img src="images/Hypogeo logo2018 .png" alt="HypoGeo">
+                    </div>
+                    <h3 class="artist-name">HypoGeo</h3>
+                </div>
+                <div class="artist-card" onclick="openModal('electrypnose-modal')">
+                    <div class="artist-image">
+                        <img src="images/Electrypnose Promo Logo3.jpg" alt="Electrypnose">
+                    </div>
+                    <h3 class="artist-name">Electrypnose</h3>
+                </div>
+                <div class="artist-card" onclick="openModal('schrott-modal')">
+                    <div class="artist-image">
+                        <img src="images/schrott logo 2.jpg" alt="Schrott">
+                    </div>
+                    <h3 class="artist-name">Schrott</h3>
+                </div>
+            </div>
+            <a href="mailto:info@subritualrecords.com?subject=Artist%20Booking" class="book-artist-btn">
+                <i class="fa-solid fa-calendar"></i> Book Our Artists
+            </a>
+        </div>
+        <div class="scroll-arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Listen -->
+    <section id="section-3" class="page releases">
+        <div class="page-content">
+            <h2>Listen</h2>
+            <!-- Menu -->
+            <nav class="hamburger-menu">
+                <input type="checkbox" id="menu-toggle-3" class="menu-toggle">
+                <label for="menu-toggle-3" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="menu-list">
+                    <li><a href="#section-1">Home</a></li>
+                    <li><a href="#section-2">Artists</a></li>
+                    <li><a href="#section-3">Listen</a></li>
+                                    </ul>
+            </nav>
+            <div class="release-grid">
+                <div class="embed-container soundcloud-embed">
+                    <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/hypogeo/brodo-hypogeo-sideproject-deep-hypnotic-techno-set-ozora-2025-the-dome&color=%23000000&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                </div>
+                <div class="embed-container youtube-embed">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/jUyY1HgmSH4?rel=0&modestbranding=1&origin=https://subritualrecords.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Artist Modal: HypoGeo -->
+    <div id="hypogeo-modal" class="artist-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('hypogeo-modal')">&times;</button>
+            <div class="modal-header">
+                <img src="images/Hypogeo logo2018 .png" alt="HypoGeo" class="modal-artist-image">
+                <h2 class="modal-artist-name">HypoGeo</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-bio">Bio coming soon...</p>
+                <div class="modal-links">
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-globe"></i> Website
+                    </a>
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-soundcloud"></i> SoundCloud
+                    </a>
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-bandcamp"></i> Bandcamp
+                    </a>
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-youtube"></i> YouTube
+                    </a>
+                    <a href="mailto:info@subritualrecords.com?subject=Booking%20HypoGeo" class="link-button">
+                        <i class="fa-solid fa-calendar"></i> Book
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artist Modal: Electrypnose -->
+    <div id="electrypnose-modal" class="artist-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('electrypnose-modal')">&times;</button>
+            <div class="modal-header">
+                <img src="images/Electrypnose Promo Logo3.jpg" alt="Electrypnose" class="modal-artist-image">
+                <h2 class="modal-artist-name">Electrypnose</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-bio">Operated by Vince LeBarde, Electrypnose — the electric hypnosis — began as a psytrance project, but over the years has evolved into a broad exploration of countless genres and sub-genres, both connected to the psytrance culture and far beyond it.</p>
+                <div class="modal-links">
+                    <a href="https://www.electrypnose.ch" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-globe"></i> Website
+                    </a>
+                    <a href="https://soundcloud.com/electrypnose" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-soundcloud"></i> SoundCloud
+                    </a>
+                    <a href="https://www.instagram.com/electrypnose_music/" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://electrypnose.bandcamp.com/" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-bandcamp"></i> Bandcamp
+                    </a>
+                    <a href="https://www.youtube.com/@electrypnose2494" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-youtube"></i> YouTube
+                    </a>
+                    <a href="mailto:info@subritualrecords.com?subject=Booking%20Electrypnose" class="link-button">
+                        <i class="fa-solid fa-calendar"></i> Book
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artist Modal: Schrott -->
+    <div id="schrott-modal" class="artist-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('schrott-modal')">&times;</button>
+            <div class="modal-header">
+                <img src="images/schrott logo 2.jpg" alt="Schrott" class="modal-artist-image">
+                <h2 class="modal-artist-name">Schrott</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-bio">Bio coming soon...</p>
+                <div class="modal-links">
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-globe"></i> Website
+                    </a>
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-soundcloud"></i> SoundCloud
+                    </a>
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-bandcamp"></i> Bandcamp
+                    </a>
+                    <a href="#" class="link-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-youtube"></i> YouTube
+                    </a>
+                    <a href="mailto:info@subritualrecords.com?subject=Booking%20Schrott" class="link-button">
+                        <i class="fa-solid fa-calendar"></i> Book
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with Contact -->
+    <footer id="section-4">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span>Get In Touch/DEMO</span>
+                <a href="mailto:info@subritualrecords.com?subject=Contact" class="footer-mail-btn">Mail</a>
+            </div>
+            <div class="footer-center">
+                <img src="images/logo foother.jpg" alt="Subritual Records" class="footer-logo">
+                <p>&copy; 2026</p>
+            </div>
+            <div class="footer-right">
+                <a href="impressum.html">Imprint</a>
+                <span class="footer-divider">|</span>
+                <a href="datenschutz.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll arrow functionality
+        document.querySelectorAll('.scroll-arrow').forEach(arrow => {
+            arrow.addEventListener('click', function() {
+                const currentSection = this.closest('.page');
+                const nextSection = currentSection.nextElementSibling;
+                const icon = this.querySelector('i');
+
+                // Check if arrow is pointing up (last section)
+                if (icon.classList.contains('fa-chevron-up')) {
+                    // Scroll to first section
+                    document.getElementById('section-1').scrollIntoView({ behavior: 'smooth' });
+                } else if (nextSection && nextSection.classList.contains('page')) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.menu-list a').forEach(link => {
+            link.addEventListener('click', function() {
+                // Close all menu toggles
+                document.querySelectorAll('.menu-toggle').forEach(toggle => {
+                    toggle.checked = false;
+                });
+            });
+        });
+
+        // Fade in hamburger menu and update arrow direction when section becomes visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const menu = entry.target.querySelector('.hamburger-menu');
+                const arrow = entry.target.querySelector('.scroll-arrow i');
+                const allSections = document.querySelectorAll('.page');
+                const isLastSection = entry.target === allSections[allSections.length - 1];
+
+                if (entry.isIntersecting) {
+                    // Handle menu fade in
+                    if (menu) {
+                        menu.classList.remove('visible');
+                        void menu.offsetWidth; // Force reflow
+                        menu.classList.add('visible');
+                    }
+
+                    // Handle arrow direction
+                    if (arrow) {
+                        if (isLastSection) {
+                            arrow.classList.remove('fa-chevron-down');
+                            arrow.classList.add('fa-chevron-up');
+                        } else {
+                            arrow.classList.remove('fa-chevron-up');
+                            arrow.classList.add('fa-chevron-down');
+                        }
+                    }
+                } else {
+                    if (menu) {
+                        menu.classList.remove('visible');
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.page').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking outside content
+        document.querySelectorAll('.artist-modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.artist-modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
