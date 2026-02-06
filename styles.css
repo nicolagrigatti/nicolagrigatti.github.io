@@ -514,15 +514,11 @@ h2 {
 }
 
 .release-artwork {
-    aspect-ratio: 1;
-    height: 100%;
-    width: auto;
     max-width: 85vw;
     margin: 0;
     border: 1px solid #000;
     border-radius: 4px;
     overflow: hidden;
-    min-height: 0;
     flex-shrink: 1;
 }
 
