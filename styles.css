@@ -327,6 +327,11 @@ html, body.snap-scroll {
     display: none;
 }
 
+/* Hide arrow on home section - content fills the page */
+.hero-release .scroll-arrow {
+    display: none;
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateX(-50%) translateY(0);
