@@ -524,7 +524,7 @@ h2 {
 
 @media (min-width: 768px) {
     .release-artwork {
-        max-width: 45vw;
+        max-width: 40vh;
         margin: 0 auto 0.25rem;
     }
 }
