@@ -1123,11 +1123,18 @@ footer {
     text-align: center;
 }
 
+.modal-bio-container {
+    max-height: 120px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+    padding-right: 0.5rem;
+}
+
 .modal-bio {
     font-size: 0.875rem;
     color: #444;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin: 0;
 }
 
 .modal-links {
