@@ -486,17 +486,18 @@ h2 {
 }
 
 .link-grid-compact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.15rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
     align-content: center;
-    width: auto;
+    width: 100%;
+    max-width: 280px;
 }
 
 @media (min-width: 768px) {
     .link-grid-compact {
-        gap: 0.3rem;
+        gap: 0.4rem;
+        max-width: 400px;
     }
 }
 
@@ -755,16 +756,16 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.08rem;
-    padding: 0.1rem 0.15rem;
+    gap: 0.15rem;
+    padding: 0.25rem 0.3rem;
     background: #e0e0e0;
     color: #000;
     border: 1px solid #000;
-    border-radius: 2px;
+    border-radius: 3px;
     text-decoration: none;
-    font-size: 0.25rem;
+    font-size: 0.4rem;
     font-weight: 500;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     transition: all 0.3s ease;
     margin-top: 0.75rem;
@@ -778,20 +779,20 @@ h2 {
 }
 
 .book-artist-btn i {
-    font-size: 0.3rem;
+    font-size: 0.45rem;
     transition: color 0.3s ease;
 }
 
 @media (min-width: 768px) {
     .book-artist-btn {
-        padding: 0.2rem 0.3rem;
-        font-size: 0.35rem;
-        gap: 0.1rem;
-        border-radius: 2px;
+        padding: 0.4rem 0.5rem;
+        font-size: 0.55rem;
+        gap: 0.2rem;
+        border-radius: 3px;
     }
 
     .book-artist-btn i {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
     }
 }
 
@@ -815,40 +816,40 @@ h2 {
 }
 
 .link-button {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.08rem;
-    padding: 0.1rem 0.15rem;
+    gap: 0.15rem;
+    padding: 0.25rem 0.3rem;
     background: #e0e0e0;
     color: #000000;
     border: 1px solid #000000;
-    border-radius: 2px;
+    border-radius: 3px;
     text-decoration: none;
     text-align: center;
-    font-size: 0.25rem;
+    font-size: 0.4rem;
     font-weight: 500;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     transition: all 0.3s ease;
     white-space: nowrap;
 }
 
 .link-button i {
-    font-size: 0.3rem;
+    font-size: 0.45rem;
     transition: color 0.3s ease;
 }
 
 @media (min-width: 768px) {
     .link-button {
-        padding: 0.2rem 0.3rem;
-        font-size: 0.35rem;
-        gap: 0.1rem;
-        border-radius: 2px;
+        padding: 0.4rem 0.5rem;
+        font-size: 0.55rem;
+        gap: 0.2rem;
+        border-radius: 3px;
     }
 
     .link-button i {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
     }
 }
 
